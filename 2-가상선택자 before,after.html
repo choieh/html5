@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>가상선택자 before, after</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			
+			p{
+				width:500px;
+				height:100px;
+				border:1px solide black;
+			}
+			p:before{
+				content:'바나나 향수 낙지덮밥 제네시스'; <!--content:필수조건 -->
+			}
+			p:after{
+				content:'하이미디어컴퓨터학원 맥북프로'; <!--content:필수조건 -->
+			}
+			.age:before{
+				content:"나이: ";
+
+			
+			}
+			
+			.age:after{
+				content:"세";
+			}
+			
+		</style>
+	
+</head>
+<body>
+	<!-- #wrap>h1+(p>label+input)+(h2>span.age) -->
+	<div id="wrap">
+		<h1>가상선택자 :before, :after</h1>
+		<p>
+		<label for="nation">국적</label>
+		<input type="text" id="nation" name="nation"/>
+		</p>
+		<h2><span class="age">20</span></h2>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- / -->

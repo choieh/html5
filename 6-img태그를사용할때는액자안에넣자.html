@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>img 태그를 사용할때는 액자안에 넣자</title>
+	<style>
+		*{margin:0; padding:0;}
+		
+		p.frame{
+			width:150px;
+			outline:1px solid red; 
+			/*outline : 박스 사이즈에 영향을 끼치지 않음, 보여지는건 border와 같다*/
+		}
+		p.frame>img{
+			width:100%;
+			/* height:auto;  ==> 기본값*/
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>액자기능의 요소 활용</h1>
+		<p class="frame">
+			<img src="images/poster.gif" alt="루벤스와 세기의 거장들" />
+		</p>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- / -->
