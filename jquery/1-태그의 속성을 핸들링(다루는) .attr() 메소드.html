@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>태그의 속성을 핸들링(다루는) .attr() 메소드</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[  //유효성검사 오류를 막는 CDATA 섹션
+	
+		//준비 핸들러
+		$(document).ready(function(){
+		
+			//변수 선언 키워드 var  ==> 변수선언 :  재사용 
+			var $img = $(".frame>img"); /*DOM 을 선택한 변수이름앞에 $를 붙인다. => $img*/
+			var year = 2020;
+			
+			//이미지를 클릭했을때 src속성 값을 flower.jpg , alt속성값을 "꽃"으로 바꾸는 코드를 작성하세요.
+			$img.on("click",function(){
+				$img.attr("src","images/flower.jpg");
+				$img.attr("alt","꽃");
+			});
+			
+		});//DOM TREE 구성이 완료된 시점에 작동
+		
+	//]]>
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>.attr() 메소드로 이미지의 속성값 출력</h1>
+		<p class="frame">
+			<img src="images/stone.jpg" alt="바위" />
+		</p>
+	</div>
+</body>
+</html>

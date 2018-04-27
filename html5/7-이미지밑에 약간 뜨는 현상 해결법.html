@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>이미지 밑에 약간 뜨는 현상 해결법</title>
+	<style>
+		*{margin:0; padding:0;}
+		
+		p.frame{
+			width:150px;
+			outline:1px solid red; 
+			/*outline : 박스 사이즈에 영향을 끼치지 않음, 보여지는건 border와 같다*/
+		}
+		p.frame>img{
+			
+			width:100%;
+			
+			/*첫번째 해결방법
+			vertical-align:top;*/
+			
+			/*두번째 해결방법*/
+			display:block;
+			
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>이미지 이상현상</h1>
+		<p class="frame"><img src="images/poster.gif" alt="루벤스와 세기의 거장들" /></p>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- / -->

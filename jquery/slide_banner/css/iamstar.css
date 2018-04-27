@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/* 약식초기화 */
+/*
+float : 나열
+position : 배치
+*/
+
+*{
+	margin:0;
+	padding:0;
+}  
+
+ul,li{
+	list-style:none;
+}
+/* 공동요소 */
+.sr-only{
+	position:absolute;
+	left:-9999px;
+}
+
+#wrap{
+	width:706px;
+	margin:0 auto;
+	
+}
+
+/* 헤더영역 */
+header>h1{
+	height:100px;
+	text-align:center;
+	line-height:100px;
+}
+
+/* float을 적용하고 싶으면 반드시 부모자식 관계를 만들어 작업한다. */
+header>nav>ul{
+	width:706px;
+	height:74px;
+	*zoom:1;
+}
+
+header>nav>ul:after{
+	display:block; /*d:b*/
+	clear:both; /* cl:b */
+	content:''; /* ct */
+}
+
+header>nav>ul>li{
+	float:left;/*f:l*/
+	margin-right:5px; /*mr*/
+}
+header>nav>ul>li:last-child{
+	margin-right:0;
+}
+
+
+/* 섹션영역 */
+section>.screen{
+	overflow:hidden;
+	width:706px;
+	height:325px;
+	
+}
+section>.screen>img{
+	width:100%;
+	
+}
+/* 푸터영역 */
+footer{
+	line-height:50px;
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */

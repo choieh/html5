@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+#wrap{
+	width:600px;
+	margin:20px auto 0;
+	background-color:#333;
+}
+header{
+	position:relative;
+	background-color:#069;
+	height:100px;
+}
+header>h1{
+	position:absolute;
+	left:20px;
+	top:40px;
+	font-size:30px;
+	color:#fff;
+}
+header>nav{
+	position:absolute;
+	left:200px;
+	top:45px;
+}
+header>nav>.gnb{
+	*zoom:1;
+}
+header>nav>.gnb:after{
+	display:block; clear:both; content:'';
+}
+
+header>nav>.gnb>li{
+	float:left;
+	width:65px;
+	height:20px;
+}
+
+/*css 특정도 값 - 태그(1점), 클래스(10점), 아이디(100점),인라인스타일(1000점)*/
+header>nav>.gnb>li>a{
+	display:block;
+	height:20px;
+	color:#fff;
+	line-height:20px;
+	text-align:center;
+}
+header>nav>.gnb>li.on>a{
+	color:#ff0;
+	font-weight:800;
+	text-shadow:1px 1px 2px white;
+		
+}
+section{
+	width:570px;
+	margin: 5px auto;
+	padding:30px 10px 10px 10px;
+	background-color:#FFF;
+}
+section>h2{
+	margin-bottom:25px;
+	color:#000;
+	font-size:25px;
+}
+section>p{
+	font-size:14px;
+	line-height:1.4;
+	*zoom:1
+}
+section>p:after{
+	display:block; clear:both; content:'';
+}
+
+section>p>.frame{
+	overflow:hidden;
+	display:block;
+	float:right;
+	width:300px;
+	margin-left:5px;
+	box-shadow:3px 3px 3px gray;
+	border-radius:5px;	
+}
+section>p>.frame>img{
+	width:100%;
+	vertical-align:top;
+}
+	
+footer{
+	height:80px;
+	
+}
+footer>address{
+	font-size:16px;
+	color:#fff;
+	line-height:80px;
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* / */
+

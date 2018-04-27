@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>제이쿼리 click 이벤트</title>
+	<style>
+		*{margin:0; padding:0;}
+		
+		#wrap{
+			text-align:center;
+		}
+		
+		.frame{
+			display:block;
+			width:150px;
+			margin:0 auto;
+			border:2px solid red;
+		}
+		.frame>img{
+			width:100%;
+			
+			/*이미지 밑이 약간 뜨는 현상 :첫번째 해결방법*/
+			vertical-align:top;
+			
+			/*이미지 밑이 약간 뜨는 현상 :두번째 해결방법
+			display:block;*/
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+		$(document).ready(function(){
+			//버튼에 대한 클릭이벤트 구문
+			$("button").on("click",function(){
+				/*이미지의 속성값을 아래와 같이 바꾸세요
+					src:images/stone.jpg
+					alt: 바위
+				*/
+				var $img = $(".frame>img");
+				$img.attr("src","images/stone.jpg");
+				$img.attr("alt","바위");
+				
+			});
+		});
+	//]]>
+	</script>
+	
+
+</head>
+<body>
+	<div id="wrap">
+			<h1>click 이벤트를 배워봐요~</h1>
+			<p>
+				클릭이벤트 발생시 function(){~~} 익명함수가 실행됩니다. <br />
+				<span class="frame" style="">
+					<img src="images/flower.jpg" alt="꽃" />
+				</span>
+			</p>
+			<!-- text,img,button : 텍스트 처럼 사용가능 -->
+			<p><button type="button">카카오톡</button></p>
+	</div>
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- / -->

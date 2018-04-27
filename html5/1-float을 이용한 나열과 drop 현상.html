@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>1-float을 이용한 나열과 drop 현상</title>
+	<style type="text/css">
+		*{
+			margin:0; padding:0;
+		}
+		
+		ul,li{
+			list-style:none;
+		}
+		#wrap{
+			margin:0 auto;
+			width:850px;
+		}
+		h1{
+			height:50px;
+			line-height:50px;
+			text-align:center;		
+		}
+		
+		ul.ib>li{
+			display:inline-block;
+			width:150px;
+			height:80px;
+			border:1px solid black;
+		}
+		
+		ol{
+			width:800px;
+			height:100px;
+			*zoom:1;
+		}
+		ol:after{
+			display:block;
+			clear:both;
+			content:'';
+		}
+		
+		ol>li{
+			float:left;
+			width:200px;
+			height:100px;
+			text-align:center;
+			line-height:100px;
+			border:1px solid blue;
+			box-sizing:border-box;		
+		}
+		
+		.test>ul{
+			width:500px;
+			height:100px;
+			*zoom:1;
+		}
+		.test>ul:after{
+			display:block;
+			clear:both;
+			content:'';
+		}
+		
+		.test>ul>li{
+			float:left;
+			width:100px;
+			height:100px;
+			line-height:100px;
+			text-align:center;
+			border: 1px solid red;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>float을 이용한 박스 나열</h1>
+		<div class="study">
+			<ul class="ib">
+				<li>HTML5</li>
+				<li>CSS2 &amp; CSS3</li>
+				<li>Javascript</li>
+				<li>jQuery</li>
+				<li>zencoding</li>
+			</ul>
+			<hr style="margin:20px 0 0" />
+			<ol>
+				<li>UI/UX</li>
+				<li>포토샵</li>
+				<li>일러스트</li>
+				<li>포트폴리오</li>
+			</ol>
+		</div>
+		
+		<hr style="margin:20px 0 0" />
+			<div class="test">
+			 <ul>
+				<li style="background-color: red">red</li>
+				<li style="background-color: blue">blue</li>
+				<li style="background-color: green">green</li>
+				<li style="background-color: yellow">yellow</li>
+				<li style="background-color: pink">pink</li>
+			 </ul>
+			 <span>플롯연습</span>
+			</div>   
+		
+		
+	</div><!--#wrap -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>블럭요소와 인라인요소의 특징</title>
+	<style>
+		*{
+		margin:0;
+		padding:0;
+		}
+		h1,span{
+			width:400px;
+			height:400px;
+			background-color:#FF0;
+			border:1px solid blue;
+		}
+		.container{
+			*zoom:1;
+		}
+		.container:after{
+			display:block; clear:both; content:'';
+		}
+		.container>p{
+			float:left;
+			color:#fff;
+			background-color:#f00;
+			
+		}
+		.container>div{
+			float:left;
+			background-color:orange;
+		}
+	</style>
+</head>
+<body>
+	<h1>나는 블럭요소 h1</h1>   
+   <span>나는 인라인요소 span</span>   
+   <div class="container">
+	   <p>나는 블럭요소 p</p>
+	   <div>나는 블럭요소 div</div>
+   </div>
+   
+
+
+   <span>나는 인라인요소 span-1</span>
+   <span>나는 인라인요소 span-2</span>
+   <span>나는 인라인요소 span-3</span>
+   <span>나는 인라인요소 span-4</span>
+   <span>나는 인라인요소 span-5</span>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- / -->
