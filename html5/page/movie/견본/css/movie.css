@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+#wrap{
+	width:665px;
+	margin:0 auto;
+}
+
+header>h1{
+	height:70px;
+	line-height:70px;
+	
+}
+section>h2{
+	height:50px;
+	line-height:50px;
+}
+section>.movie>ol{
+	width:665px;
+	*zoom:1;
+}
+section>.movie>ol:after{
+	display:block; clear:both; content:'';
+}
+section>.movie>ol>li.pack{
+	float:left;
+	width:164px;
+	margin-right:3px;
+	
+}
+section>.movie>ol>li.pack:last-child{
+	margin-right:0;
+}
+
+section>.movie .pack>ul{
+	
+}
+section>.movie .pack>ul>li.pht{
+	position:relative;
+	height:114px;
+}
+section>.movie .pack:nth-child(1)>ul>li.pht{
+	background-image:url(../images/movie_1.gif);
+}
+section>.movie .pack:nth-child(2)>ul>li.pht{
+	background-image:url(../images/movie_2.gif);
+}
+section>.movie .pack:nth-child(3)>ul>li.pht{
+	background-image:url(../images/movie_3.gif);
+}
+section>.movie .pack:nth-child(4)>ul>li.pht{
+	background-image:url(../images/movie_4.gif);
+}
+/*play icon*/
+section>.movie .pack>ul>li.pht>.mov{
+	display:block;
+	position:absolute;
+	left:5px;
+	bottom:3px;
+	width:26px;
+	height:27px;
+	text-indent:-9999px;
+	background-image:url(../images/sp_ico.png);
+	background-position:-102px -450px;
+}
+
+/*최초*/
+section>.movie .pack>ul>li.pht>.frst{
+	display:block;
+	position:absolute;
+	right:3px;
+	bottom:3px;
+	width:45px;
+	height:25px;
+	color:#fff;
+	font-weight:800;
+	line-height:25px;
+	letter-spacing:1px;
+	text-align:center;
+	background-color:green;
+}
+
+
+section>.movie .pack>ul>li.tit{
+	height:30px;
+	font-weight:800;
+	font-size:14px;
+	line-height:30px;
+}
+/*hd*/
+section>.movie .pack>ul>li.tit>a>span{
+	display:inline-block;
+	width:30px;
+	height:15px;
+	color:#2952f4;
+	line-height:15px;
+	text-align:center;
+	border:1px solid #dedede;
+}
+
+/*tip*/
+section>.movie .pack>ul>li.tip{
+	height:25px;
+	color:gray;
+	font-size:12px;
+	line-height:25px;
+	font-family:"돋움";
+	text-indent:5px;
+}
+
+footer>address{
+	height:100px;
+	line-height:100px;
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* / */
