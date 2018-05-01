@@ -1,11 +1,15 @@
 @charset "utf-8";
 
-header>nav{
+.n-fixed{
 	position:fixed; /*무조건 body가 부모*/
 	left:0;
 	top:0;
+}
+
+header>nav{
 	width:100%;
 	background-color:#555;
+	opacity:0.5;
 }
 header>nav>.gnb{
 	width:1200px;

@@ -1,0 +1,4 @@
+.ttf 파일을 EOTFAST-1.exe에 끌어다 올려놓으면 자동변환 => .eot
+
+
+.ttf 파일을 sfnt2woff.exe에 끌어다 올려놓으면 자동변환 => .woff
