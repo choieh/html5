@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>클릭이벤트 연습</title>
+	<style>
+		ul,li{list-style:none;}
+		a:link{color:#000; text-decoration:none;}
+		li{
+			float:left;
+			margin:10px;
+			padding:10px 20px;
+			text-align:center;
+			background-color:yellow;
+			
+		}
+		
+		li.on>a{
+			color:blue;
+			font-weight:800;
+			font-size:20px;
+		}
+		
+		
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+		$(document).ready(function(){
+		
+
+			$(".gnb>li>a").on("click",function(evt){
+				
+				var idx = $(".gnb>li>a").index(this);
+				var scrollTopVal = 700*idx;
+				
+				
+				if(scrollTopVal>=0){
+					//명령코드 실행;
+					$(".gnb>li>a").eq(0).parent().addClass("on")
+					.siblings().removeClass("on");
+				}
+				
+				if(scrollTopVal>=700){
+					$(".gnb>li>a").eq(1).parent().addClass("on")
+					.siblings().removeClass("on");
+				}
+				
+				if(scrollTopVal>=1400){
+					$(".gnb>li>a").eq(2).parent().addClass("on")
+					.siblings().removeClass("on");
+				}
+				
+				if(scrollTopVal>=2100){
+					$(".gnb>li>a").eq(3).parent().addClass("on")
+					.siblings().removeClass("on");
+				}
+				
+				
+				
+				
+				evt.preventDefault();
+					
+			});
+			
+		});
+	//]]>
+	</script>
+</head>
+<body>
+	<ul class="gnb">
+		<li><a href="#">home</a></li>
+		<li><a href="#">aboutme</a></li>
+		<li><a href="#">skill</a></li>
+		<li><a href="#">portfolio</a></li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- / -->

@@ -15,25 +15,37 @@ $(document).ready(function(){
 	//0번째 메뉴 - li에 대한 클릭 이벤트 구문
 	$(".gnb>li>a").eq(0).on("click",function(evt){
 		//문서 전체를 선택 : $("html,body")
-		$("html,body").animate({scrollTop:top_container_0-50});
+		$("html,body").animate({scrollTop:top_container_0-100});
 		evt.preventDefault();//앵커태그의 기본기능 무력화
 		
 				
 	});
 	
 	$(".gnb>li>a").eq(1).on("click",function(evt){
-		$("html,body").animate({scrollTop:top_container_1-50});
+		$("html,body").animate({scrollTop:top_container_1-100});
 		evt.preventDefault();
 	});
 	
 	$(".gnb>li>a").eq(2).on("click",function(evt){
-		$("html,body").animate({scrollTop:top_container_2-50});
+		$("html,body").animate({scrollTop:0});
 		evt.preventDefault();
 	});
 	
 	$(".gnb>li>a").eq(3).on("click",function(evt){
-		$("html,body").animate({scrollTop:top_container_3-50});
+		$("html,body").animate({scrollTop:top_container_2-100});
 		evt.preventDefault();
+	});
+	
+	$(".gnb>li>a").eq(4).on("click",function(evt){
+		$("html,body").animate({scrollTop:top_container_3-100});
+		evt.preventDefault();
+	});
+	
+	
+		//문서가 load(된 시점)이벤트 구문
+	$(window).on("load",function(){
+		$("html,body").animate({scrollTop:0});
+		
 	});
 	
 	
@@ -51,18 +63,31 @@ $(document).ready(function(){
 		*/
 		
 		
-		if($(window).scrollTop()>100){
-			$("nav").addClass("n-fixed");
-			// $(".container_1").css("margin-top","50px");
-			
+		if($(window).scrollTop()>=100){	
 			$(".up").stop().animate({"opacity":"1"},100);
 		}else{
-			$("nav").removeClass("n-fixed");
-			// $(".container_1").css("margin-top","0px");
-			
 			$(".up").stop().animate({"opacity":"0"},100);
 		}
-				
+		
+		
+		if($(window).scrollTop()>=100){
+			$(".gnb>li>a").eq(0).parent().addClass("on").siblings().removeClass("on");
+		}else{
+			$(".gnb>li>a").parent().removeClass("on");
+		}
+		
+		if($(window).scrollTop()>=top_container_1-100){
+			$(".gnb>li>a").eq(1).parent().addClass("on").siblings().removeClass("on");
+		}
+		
+		if($(window).scrollTop()>=top_container_2-100){
+			$(".gnb>li>a").eq(3).parent().addClass("on").siblings().removeClass("on");
+		}
+		
+		if($(window).scrollTop()>=top_container_3-100){
+			$(".gnb>li>a").eq(4).parent().addClass("on").siblings().removeClass("on");
+		}
+			
 	});
 	
 	$(".up").on("click",function(){

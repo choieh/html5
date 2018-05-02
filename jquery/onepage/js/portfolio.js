@@ -48,6 +48,13 @@ $(document).ready(function(){
 		evt.preventDefault();
 	});
 	
+	//문서가 load(된 시점)이벤트 구문
+	$(window).on("load",function(){
+		$("html,body").animate({scrollTop:0});
+		$(".gnb>li>a").eq(0).parent().addClass("on"); /*첫번째 메뉴 활성화*/
+		
+	});
+	
 	
 	//스크롤 이벤트 구문 - 주체는 항상 $(window)
 	$(window).on("scroll",function(){
@@ -70,6 +77,32 @@ $(document).ready(function(){
 			$("nav").removeClass("n-fixed");
 			$(".container_1").css("margin-top","0px");
 		}
+		
+		if($(window).scrollTop()>=top_container_0){
+			$(".gnb>li>a").eq(0).parent().addClass("on").siblings().removeClass("on");
+		}
+		
+		if($(window).scrollTop()>=top_container_1-50){
+			$(".gnb>li>a").eq(1).parent().addClass("on").siblings().removeClass("on");
+		}
+		
+		if($(window).scrollTop()>=top_container_2-50){
+			$(".gnb>li>a").eq(2).parent().addClass("on").siblings().removeClass("on");
+		}
+		
+		if($(window).scrollTop()>=top_container_3-50){
+			$(".gnb>li>a").eq(3).parent().addClass("on").siblings().removeClass("on");
+		}
+		
+		if($(window).scrollTop()>=top_container_4-50){
+			$(".gnb>li>a").eq(4).parent().addClass("on").siblings().removeClass("on");
+		}
+		
+		if($(window).scrollTop()>=top_container_5-50){
+			$(".gnb>li>a").eq(5).parent().addClass("on").siblings().removeClass("on");
+		}
+		
+		
 	});
 	
 });

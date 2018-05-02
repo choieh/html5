@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>if조건문</title>
+	<style>
+		ul,li{list-style:none;}
+		a:link{color:#000; text-decoration:none;}
+		li{
+			float:left;
+			margin:10px;
+			padding:10px 20px;
+			text-align:center;
+			background-color:pink;
+			
+		}
+		
+		li.on>a{
+			color:blue;
+			font-weight:800;
+			font-size:20px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+		$(document).ready(function(){
+			$(".gnb>li>a").on("click",function(evt){
+				
+				//이번에 클릭한 요소의 인덱스 번호
+				var idx = $(".gnb>li>a").index(this);
+				
+				var scrollTopVal = 700 * idx;
+				
+				if(scrollTopVal>=0){
+					//명령코드 실행;
+					$(".gnb>li>a").eq(0).parent().addClass("on")
+					.siblings().removeClass("on");
+				}
+				
+				if(scrollTopVal>=700){
+					$(".gnb>li>a").eq(1).parent().addClass("on")
+					.siblings().removeClass("on");
+				}
+				
+				if(scrollTopVal>=1400){
+					$(".gnb>li>a").eq(2).parent().addClass("on")
+					.siblings().removeClass("on");
+				}
+				
+				if(scrollTopVal>=2100){
+					$(".gnb>li>a").eq(3).parent().addClass("on")
+					.siblings().removeClass("on");
+				}
+				
+				if(scrollTopVal>=2800){
+					$(".gnb>li>a").eq(4).parent().addClass("on")
+					.siblings().removeClass("on");
+				}
+				
+				if(scrollTopVal>=3500){
+					$(".gnb>li>a").eq(5).parent().addClass("on")
+					.siblings().removeClass("on");
+				}
+				
+				evt.preventDefault();
+				
+			});
+		
+		});
+	//]]>
+	</script>
+</head>
+<body>
+	<ul class="gnb">
+		<li><a href="#">home</a></li>
+		<li><a href="#">aboutme</a></li>
+		<li><a href="#">design</a></li>
+		<li><a href="#">skill</a></li>
+		<li><a href="#">portfolio</a></li>
+		<li><a href="#">epilogue</a></li>
+	</ul>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- </html>/ -->

@@ -31,6 +31,8 @@ header>nav>.gnb>li>a{
 	line-height:50px;
 	text-align:center;
 }
+
+header>nav>.gnb>li.on>a,
 header>nav>.gnb>li>a:hover{
 	text-decoration:none;
 	background-color:#1C6B9D;
