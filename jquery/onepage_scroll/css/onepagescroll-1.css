@@ -1,0 +1,57 @@
+@charset "uft-8";
+
+section>article{
+	font-size:150px;
+	text-align:center;
+}
+
+.cont0{background-color:#aaa;}
+.cont1{background-color:#bbb;}
+.cont2{background-color:#ccc;}
+.cont3{background-color:#ddd;}
+.cont4{background-color:#eee;}
+
+header>nav{
+	position:fixed;
+	top:50%;
+	right:30px;
+	margin-top:-100px;
+}
+
+header>nav>ul>li{
+	margin-bottom:30px;
+}
+header>nav>.gnb>li:last-child{
+	margin-bottom:0;
+}
+
+header>nav>ul>li>a{
+	display:block;
+	width:30px;
+	height:30px;
+	text-indent:-9999px;
+	background-color:rgba(0,0,0,0.35);
+	border-radius:15px;
+}
+
+header>nav>.gnb>li.on>a{
+	background: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* / */
+
+

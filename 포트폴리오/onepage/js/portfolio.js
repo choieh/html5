@@ -8,6 +8,7 @@ $(document).ready(function(){
 	var top_container_1 = $(".container_1").offset().top;
 	var top_container_2 = $(".container_2").offset().top;
 	var top_container_3 = $(".container_3").offset().top;
+	var top_container_4 = $(".container_4").offset().top;
 	
 	/*console.log(top_container_0,top_container_1,top_container_2,top_container_3);
 	*/
@@ -26,18 +27,19 @@ $(document).ready(function(){
 		evt.preventDefault();
 	});
 	
-	$(".gnb>li>a").eq(2).on("click",function(evt){
-		$("html,body").animate({scrollTop:0});
-		evt.preventDefault();
-	});
 	
-	$(".gnb>li>a").eq(3).on("click",function(evt){
+	$(".gnb>li>a").eq(2).on("click",function(evt){
 		$("html,body").animate({scrollTop:top_container_2-100});
 		evt.preventDefault();
 	});
 	
-	$(".gnb>li>a").eq(4).on("click",function(evt){
+	$(".gnb>li>a").eq(3).on("click",function(evt){
 		$("html,body").animate({scrollTop:top_container_3-100});
+		evt.preventDefault();
+	});
+	
+	$(".gnb>li>a").eq(4).on("click",function(evt){
+		$("html,body").animate({scrollTop:top_container_4-100});
 		evt.preventDefault();
 	});
 	
@@ -62,7 +64,7 @@ $(document).ready(function(){
 		
 		*/
 		
-		
+		/*스크롤시 맨위로 올라가는 버튼 생성*/
 		if($(window).scrollTop()>=100){	
 			$(".up").stop().animate({"opacity":"1"},100);
 		}else{
@@ -70,7 +72,8 @@ $(document).ready(function(){
 		}
 		
 		
-		if($(window).scrollTop()>=100){
+		/*스트롤시 메뉴 선택*/
+		if($(window).scrollTop()>=0){
 			$(".gnb>li>a").eq(0).parent().addClass("on").siblings().removeClass("on");
 		}else{
 			$(".gnb>li>a").parent().removeClass("on");
@@ -81,18 +84,24 @@ $(document).ready(function(){
 		}
 		
 		if($(window).scrollTop()>=top_container_2-100){
-			$(".gnb>li>a").eq(3).parent().addClass("on").siblings().removeClass("on");
+			$(".gnb>li>a").eq(2).parent().addClass("on").siblings().removeClass("on");
 		}
 		
 		if($(window).scrollTop()>=top_container_3-100){
+			$(".gnb>li>a").eq(3).parent().addClass("on").siblings().removeClass("on");
+		}
+		
+		if($(window).scrollTop()>=top_container_4-100){
 			$(".gnb>li>a").eq(4).parent().addClass("on").siblings().removeClass("on");
 		}
 			
 	});
 	
+	
+	/*맨위로 올라가는 버튼*/
 	$(".up").on("click",function(){
 		
-		$("html,body").animate({scrollTop:0});
+		$("html,body").stop().animate({scrollTop:0});
 		
 	});
 	

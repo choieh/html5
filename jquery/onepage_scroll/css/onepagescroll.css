@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+section>article{
+	/*height : 제이쿼리에서 지정*/
+	font-size:150px;
+	text-align:center;
+}
+.cont0{background-color:#ccc;}
+.cont1{background-color:#9f9;}
+.cont2{background-color:#fc9;}
+.cont3{background-color:#990;}
+.cont4{background-color:#6fc;}
+
+header>nav{
+	position:fixed;
+	right:10px;
+	top:50%;
+	margin-top:-48px; /*nav사이즈의 반을 margin-top*/
+}
+header>nav>.gnb{}
+
+header>nav>.gnb>li{
+	margin-bottom:10px;	
+}
+header>nav>.gnb>li:last-child{
+	margin-bottom:0;
+}
+header>nav>.gnb>li>a{
+	display:block;
+	width:10px;
+	height:10px;
+	margin-left:5px;
+	text-indent:-9999px;
+	background-color:rgba(0,0,0,0.85);
+	border-radius:5px; /*w값의 반이상만 주면됨*/
+}
+
+header>nav>.gnb>li.on>a{
+	width:12px;
+	height:12px;
+	margin-left:2px;
+	background:none;
+	border:2px solid #fff;
+	border-radius:8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* / */
