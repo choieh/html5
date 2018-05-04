@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>배열과 for반복문</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	$(document).ready(function(){
+		//여러개의 값을 한꺼번에 저장 할수 있는 배열 변수
+		var days = ["월","화","수","목","금","토","일"];
+		
+		days[7] = "공휴일";
+		//console.log(days[7]);
+		
+		days[8] = "명절";
+		//console.log(days[8]);
+		
+		//days[2];
+		//console.log(days[0],",",days[1],",",days[2],",",days[3],",",days[4],",",days[5],",",days[6]);
+		
+		//console.log(days.length);
+		
+		days.push("기념일");
+		//console.log(days[9]);
+		
+		days[3] ="목요일";
+		//console.log(days[3]);
+		
+		var num = [100,200,300,400,"500"];
+		//console.log(num[0],num[1],num[2],num[3],num[4]);
+		
+		/*
+		for(반복문내에서 사용할 변수 초기화;조건식;증감식){
+			실행할 코드
+		}
+		*/
+		for(var i=0;i<=4;i=i+1){
+			console.log(i+"="+num[i]);
+		}
+		
+	});
+	//]]>
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- / -->

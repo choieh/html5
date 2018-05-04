@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+.n-fixed{
+	position:fixed; /*무조건 body가 부모*/
+	left:0;
+	top:0;
+}
+
+header>nav{
+	width:100%;
+	background-color:#555;
+	opacity:0.5;
+}
+header>nav>.gnb{
+	width:1200px;
+	margin:0 auto;
+	*zoom:1;
+}
+header>nav>.gnb:after{
+	display:block; clear:both; content:'';
+}
+header>nav>.gnb>li{
+	float:left;
+	width:200px;
+}
+header>nav>.gnb>li>a{
+	display:block;
+	height:50px;
+	color:#fff;
+	font-size:25px;
+	line-height:50px;
+	text-align:center;
+}
+
+header>nav>.gnb>li.on>a,
+header>nav>.gnb>li>a:hover{
+	text-decoration:none;
+	background-color:#1C6B9D;
+}
+
+section{
+	height:700px;
+	font-size:150px;
+	line-height:700px;
+	text-align:center;
+}
+section:nth-child(odd){
+	background-color:skyblue;
+}
+
+section:nth-child(even){
+	background-color:pink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* / */
