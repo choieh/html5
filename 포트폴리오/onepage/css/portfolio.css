@@ -238,8 +238,6 @@ section:nth-child(even){
 	line-height:30px;
 	margin:200px auto 0;
 	font-size:20px;
-	
-	
 }
 
 .container_2{
@@ -271,14 +269,37 @@ section:nth-child(even){
 	font-size:25px;
 	border-bottom:1px solid #000;
 }
-.container_2>.slide{
+.container_2>.team_img{
 	position:absolute;
 	top:280px;
 	left:250px;
 	width:80%;
 	height:450px;
 	background-color:#ccc;
+	*zoom:1;
 }
+
+.container_2>.team_img:after{
+	display:block; clear:both; content:'';
+}
+.container_2>.team_img .part_img{
+	float:left;
+	width:33.33333%;
+	height:100%;
+}
+.container_2>.team_img>.img1{
+	/* background-color:#ffb611; */
+	background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+.container_2>.team_img>.img2{
+	/* background-color:#f26d7d; */
+	background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+.container_2>.team_img>.img3{
+	/* background-color:#00aa87; */
+	background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+}
+
 .container_3{
 	position:relative;
 }
@@ -328,19 +349,42 @@ section:nth-child(even){
 .container_3>.boxs>.box:nth-child(6){
 	margin-right:0;
 }
+
 .container_4{
 	position:relative;
 }
-.container_4>h2{
+.container_4>.detail{
 	position:absolute;
 	top:50px;
 	left:250px;
+	width:80%;
+	height:300px;
+}
+.container_4>.detail>h2{
 	display:block;
 	width:350px;
 	height:50px;
 	line-height:50px;
 	font-size:40px;
 	border-bottom:5px solid #ffb611;
+}
+.container_4>.detail>p{
+	height:40px;
+	line-height:40px;
+	font-size:15px;
+}
+.container_4>.detail>p>span{
+	font-weight:500;
+	font-size:19px;
+	border-bottom:1px solid #000;
+}
+.container_4>.all_team{
+	position:absolute;
+	top:320px;
+	left:250px;
+	width:80%;
+	height:450px;
+	background-color:#ddd;
 }
 
 footer{
