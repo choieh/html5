@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script type="text/javascript" language="javascript" src="jquery-syaku.rolling.js"></script>
+</head>
+<body>
+
+<style>
+body {font-family:나눔고딕}
+ul, ol, li{list-style:none;}
+.movie {}
+.movie:after{content:""; display:block; clear:both}
+.movie li{float:left}
+.btn {margin:5px;}
+
+.bullet:after{content:""; display:block; clear:both}
+.bullet li{float:left}
+</style>
+
+<div>
+  <h1>좌우 블릿 자동 스크롤 예제</h1>
+  <ul class="movie">
+  <li id='p_click3' style="cursor:pointer">이전</li>
+  <!-- width 를 늘일 경우 노출되는 아이템이 늘어납니다. 다음 이전 버튼은 필수는 아닙니다. -->
+  <li><div id="srolling3" style="position: relative;overflow:hidden;width:620px;height:280px;"></div></li>
+  <li id='n_click3' style="cursor:pointer">다음</li>
+  </ul>
+  <!-- 블릿을 사용할 경우 추가하세요. 꼭 id 값을 이용해야 하며, srolling_bullet_item 아이템 수만큼 노출되는 블릿영역입니다. 블릿 idx 값을 얻고 싶다면 {idx}  를 삽입하시면 idx 값으로 치환됩니다.-->
+  <div>
+  <ul id='srolling_bullet' class='bullet'>
+  <li id='srolling_bullet_item'><img src='./images/bullet_off.png'></li>
+  </ul>
+</div>
+
+<script type="text/javascript">
+    jQuery(function() {
+        var data = [
+      "<div style='border:1px solid #000;width:100px;height:20px;'>1</div>",
+      "<div style='border:1px solid #000;width:100px;height:20px;'>2</div>",
+      "<div style='border:1px solid #000;width:100px;height:20px;'>3</div>",
+      "<div style='border:1px solid #000;width:100px;height:20px;'>4</div>"
+    ];
+
+
+    var data2 = [
+      "<img src='./images/demo1.jpg' width='620' height='280'>",
+      "<img src='./images/demo2.jpg' width='620' height='280'>",
+      "<img src='./images/demo3.jpg' width='620' height='280'>",
+      "<img src='./images/demo4.jpg' width='620' height='280'>"
+    ];
+    
+    /*
+    data : [ ], // 롤링될 아이템 데이터
+    name : '#srolling_area', // 롤링 대상 element
+    item_count : 1, // 한번 이동될 아이템 수
+    cache_count : 5, // 최초 한번 임시로 생성될 아이템 수 (고치지마세요)
+    width : 100, // 노출될 아이템 크기 (필수 : 실제 아이템 보다 약간 크게 설정하세요)
+    height : 100, // 노출될 아이템 크기 (필수 : 실제 아이템 보다 약간 크게 설정하세요)
+    auto : false, // 자동 이동 설정
+    delay : 1000, // 이동 후 대기 시간
+    delay_frame : 1000, // 이동 속도
+    move : 'left', // 이동 방향 left , right , up , down 
+    prev : '#srolling_prev', // 이전 아이템 이동 버튼 element
+    next : '#srolling_next', // 다음 아이템 이동 버튼 element
+    is_bullet : false, // 블릿 사용여부
+    bullet : '#srolling_bullet', // 블릿 버튼 element
+    bullet_item : '#srolling_bullet_item', // 블릿 버튼 item element
+    bullet_style_func : null // 선택된 블릿 효과주기
+    */
+
+    // 좌우 자동 스크롤 소스
+    jQuery("#srolling").srolling({
+      data : data,
+      auto : true,
+      width : 110,
+      height : 25, 
+      delay_frame : 200,
+      move : 'left',
+      prev : '#p_click',
+      next : '#n_click'
+    });
+
+    // 좌우 블릿 자동 스크롤 예제
+    jQuery("#srolling3").srolling({
+      data : data2,
+      auto : true,
+      width : 620,
+      height : 280,
+      delay_frame : 500,
+      move : 'left',
+      prev : '#p_click3',
+      next : '#n_click3',
+      is_bullet : true,
+      bullet_style_func : function(bullet,get_bullet) {
+        // bullet = $('#srolling_bullet_item') 리턴받음
+        // get_bullet = $('선택된 class 블릿') 리턴받음
+
+        // 모든 버튼 블릿 초기화
+        jQuery('li',bullet).each(function() {
+          var img = jQuery('img',this);
+          var src = img.attr('src');
+          src = src.replace('on','off');
+          img.attr('src',src);
+        });
+
+        // 선택된 블릿 효과 주기
+        var img = jQuery('img',get_bullet);
+        var src = img.attr('src');
+        src = src.replace('off','on');
+        img.attr('src',src);
+
+      }
+    });
+
+  });
+
+
+</script>
+</body>
+</html>

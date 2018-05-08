@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	
+	<style>
+		body {overflow: hidden; margin: 0; padding:0; }
+		#layout {position: relative; maring: auto; width: 500px; height:135px; display: flex; flex-warp: wrap; align-items: center; }
+		#layout b {width: 10px; position: relative; z-index: 1; cursor: pointer;  }
+		#banner  { position:relative; z-index:0; width:480px; height:135px;overflow:hidden; margin:auto; }
+		#banner img {position: absolute; width: 160px; height: 135px; }
+		#banner img:nth-child(1) { left:-160px; z-index:2; }
+		#banner img:nth-child(2) { left:0px; }
+		#banner img:nth-child(3) { left:160px; }
+		#banner img:nth-child(4) { left:320px; }		
+		#banner img:last-child { left:480px; }
+	</style>
+	
+	<script>
+	$(document).ready(function(){			
+			var i=$("#banner img:first-child").attr('src').substr(-5,1);
+			/****** 처음부터 자동 *****/
+			var rolling=setInterval(frame, 1500);
+			function frame() {
+					
+					$("#banner img").removeClass("firstImg").animate({left:'-=160px'});		
+					i++;
+					if( i==5) {i=1}		
+					var appendImg="<img src='images/roll_img_"+i+".jpg'>";
+					$("#banner img:nth-child(3)").addClass("firstImg");
+					$("#banner").append(appendImg);
+					if( $("#banner img:first-child").position().left<=-320 ) {  $("#banner img:first-child").remove()  }
+			}			
+			
+			/****** 왼쪽버튼 클릭시 ******/
+			$("#left").click(function(){
+				clearInterval();
+				$("#banner img").removeClass("firstImg").animate({left:'-=160px'});		
+				i++;
+				if( i==5) {i=1}		
+				var appendImg="<img src='images/roll_img_"+i+".jpg'>";
+				$("#banner img:nth-child(3)").addClass("firstImg");
+				$("#banner").append(appendImg);
+				if( $("#banner img:first-child").position().left<=-320 ) {  $("#banner img:first-child").remove()  }
+			});
+			
+			/****** 오른쪽버튼 클릭시 ******/			
+			$("#right").click(function(){				
+				$("#banner img").removeClass("firstImg").animate({left:'+=320px'});	
+				i=i-1;			
+				if( i==0) {i=4}
+				var prependImg="<img src='images/roll_img_"+i+".jpg'>";
+				$("#banner img:nth-child(2)").addClass("firstImg");
+				$("#banner").prepend(prependImg);
+				if( $("#banner img:last-child").position().left>=640 ) {  $("#banner img:last-child").remove()  }
+			});
+	});
+	</script>
+</head>
+<body>
+	<div id="layout">
+	<b id="left">&lt;</b>
+	<div id="banner">
+		<img src="images/roll_img_1.jpg" width="160" height="135"><img src="images/roll_img_2.jpg" width="160" height="135" class="firstImg"><img src="images/roll_img_3.jpg" width="160" height="135"><img src="images/roll_img_4.jpg" width="160" height="135"><img src="images/roll_img_1.jpg" width="160" height="135">
+	</div>
+	<b id="right">&gt;</b>
+	</div>
+</body>
+</html>
