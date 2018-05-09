@@ -146,6 +146,7 @@ footer>.sns>li{
 	background-size:cover;
 }
 
+/*아이콘*/
 footer>.sns>li.facebook{
 	background-image:url(../images/facebook_gray.png);
 	margin-right:10px;
@@ -158,11 +159,25 @@ footer>.sns>li.google{
 	background-image:url(../images/google_gray.png);
 }
 
+/*아이콘에 hover했을때*/
+footer>.sns>li.facebook:hover{
+	background-image:url(../images/facebook.png);
+	margin-right:10px;
+}
+footer>.sns>li.twitter:hover{
+	background-image:url(../images/twitter.png);
+	margin-right:10px;
+}
+footer>.sns>li.google:hover{
+	background-image:url(../images/google.png);
+}
+
 footer>.sns>li>a{
 	display:block;
 	height:70px;
 	text-indent:-9999px;
 }
+
 
 
 
