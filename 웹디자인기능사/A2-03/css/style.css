@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+/* css 리셋 - 외우기 */
+*{
+	margin:0;
+	padding:0;
+}
+ul,ol,li{list-style:none;}
+a:link, a:visited,a:hover,a:active{
+	color:#666; /*문제에서 주어진 기본 텍스트 컬러*/ 
+	text-decoration:none;
+}
+
+body{
+	color:#666;
+	font-size:16px;
+	background-color:#FFF;
+}
+section,article{
+	outline:1px solid red; /*삭제 예정*/
+}
+
+#wrap{
+	width:1200px;
+	height:1200px;
+	margin:0 auto;
+}
+
+/* A영역 */
+header{
+	position:relative;
+	height:200px;
+}
+	/*로고*/
+header>h1{
+	position:absolute;
+	top:50px;
+	left:0;
+	width:241px;
+
+}
+header>h1>a{
+	display:block;
+	height:100px;
+	text-indent:-9999px;
+	background-image:url(../images/logo.png);
+}
+
+	/*메인메뉴*/
+header>nav{
+	position:absolute;
+	right:0;
+	top:100px;
+}
+header>nav>.gnb{
+	width:900px;
+	*zoom:1;
+}
+header>nav>.gnb:after{
+	display:block;
+	clear:both;
+	content:'';
+}
+header>nav>.gnb>li{
+	float:left;
+	width:180px; /*전체 폭에 따라 알아서 수치배분*/
+}
+header>nav>.gnb>li>a{
+	display:block;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+}
+
+section{
+	height:350px;
+}
+
+article{
+	height:500px;
+}
+
+/* D영역 */
+footer{
+	position:relative;
+	height:150px;
+	border-top:1px solid #666;
+	box-sizing:border-box; /*bxz:bb*/
+}
+
+footer>a.logo{
+	display:block;
+	position:absolute;
+	top:25px;
+	left:50px;
+	width:241px;
+	height:100px;
+	text-indent:-9999px;
+	background-image:url(../images/logo_gray.png);
+}
+
+footer>div{
+	position:absolute;
+	left:400px;
+	top:40px;
+}
+
+footer>div>ul{
+	*zoom:1;
+}
+footer>div>ul:after{
+	display:block;
+	clear:both;
+	content:'';
+}
+
+footer>div>ul>li{
+	float:left;
+	margin-right:30px;
+}
+
+footer>div>ul>li>a{
+	line-height:25px;
+}
+
+footer>div>p{
+	line-height:30px;
+}
+
+/*sns아이콘*/
+footer>.sns{
+	position:absolute;
+	right:50px;
+	top:40px;
+	*zoom:1;
+}
+footer>.sns:after{
+	display:block;
+	clear:both;
+	content:'';
+}
+footer>.sns>li{
+	float:left;
+	width:70px;
+	border-radius:35px;
+	background-size:cover;
+}
+
+footer>.sns>li.facebook{
+	background-image:url(../images/facebook_gray.png);
+	margin-right:10px;
+}
+footer>.sns>li.twitter{
+	background-image:url(../images/twitter_gray.png);
+	margin-right:10px;
+}
+footer>.sns>li.google{
+	background-image:url(../images/google_gray.png);
+}
+
+footer>.sns>li>a{
+	display:block;
+	height:70px;
+	text-indent:-9999px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
