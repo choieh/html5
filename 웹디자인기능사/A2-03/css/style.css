@@ -16,13 +16,10 @@ body{
 	font-size:16px;
 	background-color:#FFF;
 }
-section,article{
-	outline:1px solid red; /*삭제 예정*/
-}
 
 #wrap{
 	width:1200px;
-	height:1200px;
+	height:1025px;/* height:1025px; */
 	margin:0 auto;
 }
 
@@ -51,6 +48,7 @@ header>nav{
 	position:absolute;
 	right:0;
 	top:100px;
+	z-index : 100;
 }
 header>nav>.gnb{
 	width:900px;
@@ -71,13 +69,196 @@ header>nav>.gnb>li>a{
 	line-height:50px;
 	text-align:center;
 }
+header>nav>.gnb>li:hover>a{
+	color:#fff;
+	background-color:#009688;
+}
+header>nav>.gnb>li>.submenu{
+	display:none;
+	width:180px;
+	background-color:rgba(255,255,255,0.9);
+}
 
+header>nav>.gnb>li>.submenu>li>a{
+	display:block;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+}
+header>nav>.gnb>li>.submenu>li:hover>a{
+	color:#fff;
+	background-color:rgba(106,106,106,0.9);
+}
+
+
+/*B영역*/
 section{
+	overflow:hidden;
+	position:relative;
 	height:350px;
 }
 
+	/*메인베너*/
+section>.slides-container{
+	position:absolute;
+	left:0;/*첫번째 슬라이드는 left:0, 두번째 left:-1200px, 세번째 left:-2400px*/
+	top:0;
+	width:3600px;
+	*zoom:1;
+}
+section>.slides-container:after{
+	display:block; clear:both; content:"";
+}
+
+section>.slides-container>li{
+	float:left;
+	width:1200px;
+	height:350px;
+	text-indent:-9999px;
+}
+section>.slides-container>li:nth-child(1){
+	background-image:url(../images/mainbanner_1.png);
+}
+section>.slides-container>li:nth-child(2){
+	background-image:url(../images/mainbanner_2.png);
+}
+section>.slides-container>li:nth-child(3){
+	background-image:url(../images/mainbanner_3.png);
+}
+
+	/*메인베너 위에 떠있는 이미지 3컷 처리*/
+section>div{
+	position:absolute;
+	left:50%;
+	bottom:10px;
+	width:500px;
+	margin-left:-250px;
+	opacity:0.6;
+	*zoom:1;
+}
+section>div:after{
+	display:block; clear:both; content:"";
+}
+section>div>p{
+	float:left;
+	width:150px;
+	height:100px;
+	text-indent:-9999px;
+}
+section>div>p.story_1{
+	margin-right:25px;
+	background-image:url(../images/story_1.png);
+}
+section>div>p.story_2{
+margin-right:25px;
+	background-image:url(../images/story_2.png);
+}
+section>div>p.story_3{
+	background-image:url(../images/story_3.png);
+}
+
+
+/*C영역*/
 article{
+	height:325px;
+	*zoom:1;
+}
+article:after{
+	display:block; clear:both; content:"";
+}
+article>div{
+	margin-top:25px;
+}
+
+article>div>h2{
+	height:50px;
+	line-height:50px;
+	text-align:center;
+}
+
+	/*공지사항*/
+article>.notice{
+	float:left;
+	width:490px;
+	height:300px;
+	margin-right:10px;
+}
+article>.notice>table{
+	width:100%;
+	font-size:14px;
+	border-top:1px solid #666;
+	border-collapse:collapse; /*border-collapse:collapse; 테이블 전용 속성*/
+}
+article>.notice>table tr:nth-child(even){
+	background-color:rgba(0,255,0,0.5);
+}
+
+article>.notice>table tr>th{
+	line-height:35px;
+}
+article>.notice>table tr>td{
+	line-height:27px;
+}
+article>.notice>table tr>td:nth-child(odd){
+	text-indent:20px;
+}
+
+
+	/*뉴스*/
+article>.news1{
+	float:left;
+	width:345px;
+	height:300px;
+	margin-right:10px;
+}
+article>.news1>p{
+	height:225px;
+	text-indent:-9999px;
+	background-image:url(../images/news_1.png);
+	background-position:center center;
+	background-size:cover;
+}
+article>.news2{
+	float:left;
+	width:345px;
+	height:300px;
+}
+article>.news2>p{
+	height:225px;
+	text-indent:-9999px;
+	background-image:url(../images/news_2.png);
+	background-position:center center;
+	background-size:cover;
+}
+
+	/*팝업창*/
+article>.popup{
+	position:fixed;
+	left:50%;
+	top:50%;
+	width:500px;
 	height:500px;
+	margin:-250px 0 0 -50px;
+	background-color:#FFF;
+	border:1px solid red;
+	z-index:200;
+}
+article>.popup>p{
+	width:100%;
+	height:456px;
+	text-indent:-9999px;
+	background-color:#FFF;
+	background-image:url(../images/popup.png);
+	background-position:center center;
+	background-size:contain;
+	background-repeat:no-repeat;
+}
+article>.popup>.clse{
+	position:absolute;
+	right:20px;
+	bottom:20px;
+	width:100px;
+	height:35px;
 }
 
 /* D영역 */
@@ -127,7 +308,7 @@ footer>div>p{
 	line-height:30px;
 }
 
-/*sns아이콘*/
+	/*sns아이콘*/
 footer>.sns{
 	position:absolute;
 	right:50px;
@@ -146,7 +327,7 @@ footer>.sns>li{
 	background-size:cover;
 }
 
-/*아이콘*/
+	/*아이콘*/
 footer>.sns>li.facebook{
 	background-image:url(../images/facebook_gray.png);
 	margin-right:10px;
@@ -159,7 +340,7 @@ footer>.sns>li.google{
 	background-image:url(../images/google_gray.png);
 }
 
-/*아이콘에 hover했을때*/
+	/*아이콘에 hover했을때*/
 footer>.sns>li.facebook:hover{
 	background-image:url(../images/facebook.png);
 	margin-right:10px;
