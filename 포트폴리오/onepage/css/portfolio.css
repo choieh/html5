@@ -346,9 +346,41 @@ section:nth-child(even){
 	height:295px;
 }
 .container_3>.boxs>.top{
+	position:relative;
+	overflow:hidden;
 	margin-right:15px;
-	background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+	background-color:#ccc;
 }
+.container_3>.boxs>.top>img{
+	height:295px;
+	margin-left:-50px;
+}
+.container_3>.boxs>.top:hover>img{
+	transition: .5s ease;
+	transform:scale(1.5); 
+	filter: grayscale(100%);
+}
+.container_3>.boxs>.top>span{
+	display:block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:80px;
+	height:80px;
+	margin:-40px;
+	opacity:0;
+	z-index:600;
+}
+.container_3>.boxs>.top>span>a>i{
+	display:block;
+	height:80px;
+	color:#ffb611;
+	line-height:80px;
+	text-align:center;
+	font-size:5em;
+	
+}
+
 .container_3>.boxs>.down{
 	margin-right:15px;
 	margin-bottom:0px;
