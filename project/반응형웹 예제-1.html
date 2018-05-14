@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>반응형 웹디자인을 위한 미디어 쿼리</title>
+	<style>
+		*{margin:0; padding:0;}
+		
+		#wrap{
+			width:960px;
+			margin:30px auto 0;
+			background-color:#FFF;
+			background-color:#FF0;
+		}
+		
+		#wrap>h1{
+			height:100px;
+			line-height:100px;
+			text-align:center;
+			background-color:pink;
+			border-radius:10px;
+		}
+		
+	
+		/*미디어쿼리 작성시 특정도값이 중요하며, !important 사용도 고려*/
+		@media screen and (max-width:768px){
+			
+			#wrap{
+				width:100%;
+				background-color:red;
+			}
+			
+			h1{
+				color:red;
+				background-color:#FF0 !important;
+			}
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>미디어쿼리(query-질의하다)</h1>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
