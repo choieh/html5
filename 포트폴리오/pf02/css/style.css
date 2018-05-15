@@ -53,6 +53,11 @@ header>nav>.gnb>li>a{
 	text-align:center;
 }
 
+/*모바일*/
+header>.mobile{
+	display:none;
+}
+
 
 /*section*/
 section>.boxs{
@@ -118,6 +123,7 @@ footer>address{
 
 	/*pc 네비게이션*/
 	header{
+		position:relative;
 		background-color:#FFF;
 	}
 		
@@ -126,25 +132,70 @@ footer>address{
 	}
 	
 	/*모바일 네비게이션*/
-	header>.mobile{}
-	
+	/*
+	header>.mobile{
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		display:block;
+		background-color:#aaa;
+	}*/
+	header>.mobile{
+		display:block;
+	}
 	header>.mobile>.btn{
+		position:fixed;
+		top:0;
+		right:10px;
 		width:50px;
 		height:50px;
+		z-index:100;
 	}
 	header>.mobile>.btn>i{
+		display:block;
+		width:50px;
+		height:50px;
 		font-size:50px;
+		text-align:center;
 	}
-		
-	header>.mobile>nav{}
 	
-	header>.mobile>nav>.m_gnb{}
+	/*클릭 전*/
+	header>.mobile>nav{
+		display:none;
+	}
 	
-	header>.mobile>nav>.m_gnb>li{
-		
+	
+		/*메뉴버튼 클릭 시*/	
+	header>.mobile>nav.on{
+		display:block;
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		width:100%;
+		background-color:#aaa;
+	}
+	
+	header>.mobile>nav.on>.m_gnb{
+		position:absolute;
+		top:200px;
+		left:50%;
+	}
+	
+	header>.mobile>nav.on>.m_gnb>li{
+		line-height:100px;
 		
 	}
 
+	header>.mobile>nav.on>.m_gnb>li>a{
+		display:block;
+		width:100%;
+		font-size:20px;
+		text-align:center;
+	}
 
 	/*section*/
 	section>.boxs{
