@@ -17,7 +17,7 @@ header{
 	background-color:#aaa;
 }
 
-h1{
+header>h1{
 	position:absolute;
 	top:0;
 	text-indent:-9999px;
@@ -116,20 +116,32 @@ footer>address{
 
 @media screen and (max-width:780px){
 
-	header>nav{
-		
+	/*pc 네비게이션*/
+	header{
+		background-color:#FFF;
 	}
+		
 	header>nav>.gnb{
-		
+		display:none;
 	}
-	header>nav>.gnb:after{
-		
+	
+	/*모바일 네비게이션*/
+	header>.mobile{}
+	
+	header>.mobile>.btn{
+		width:50px;
+		height:50px;
 	}
-	header>nav>.gnb>li{
-		
-		
+	header>.mobile>.btn>i{
+		font-size:50px;
 	}
-	header>nav>.gnb>li>a{
+		
+	header>.mobile>nav{}
+	
+	header>.mobile>nav>.m_gnb{}
+	
+	header>.mobile>nav>.m_gnb>li{
+		
 		
 	}
 
