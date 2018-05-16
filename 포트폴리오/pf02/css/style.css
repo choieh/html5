@@ -142,9 +142,30 @@ footer>address{
 		display:block;
 		background-color:#aaa;
 	}*/
+	
 	header>.mobile{
 		display:block;
 	}
+	
+	
+	/*맨위로 가는 버튼*/
+	header>.mobile>.top{
+		position:fixed;
+		right:10px;
+		bottom:50px;
+		width:50px;
+		height:50px;
+		cursor:pointer;
+	}
+	header>.mobile>.top>i{
+		display:block;
+		width:50px;
+		height:50px;
+		font-size:50px;
+		text-align:center;
+	}
+	
+	
 	header>.mobile>.btn{
 		position:fixed;
 		top:0;
@@ -152,6 +173,7 @@ footer>address{
 		width:50px;
 		height:50px;
 		z-index:100;
+		cursor:pointer;
 	}
 	header>.mobile>.btn>i{
 		display:block;
@@ -161,15 +183,27 @@ footer>address{
 		text-align:center;
 	}
 	
+	
 	/*클릭 전*/
 	header>.mobile>nav{
 		display:none;
 	}
 	
 	
-		/*메뉴버튼 클릭 시*/	
+		/*메뉴버튼 클릭 시*/
+	header>.mobile>.btn>.fa-times{
+		display:none;
+		position:absolute;
+		top:0;
+		width:50px;
+		height:50px;
+		font-size:50px;
+		text-align:center;
+	}
+
+
+		
 	header>.mobile>nav.on{
-		display:block;
 		position:fixed;
 		top:0;
 		left:0;
@@ -186,17 +220,22 @@ footer>address{
 	}
 	
 	header>.mobile>nav.on>.m_gnb>li{
-		line-height:100px;
+		width:100%;
+		line-height:120px;
 		
 	}
 
+	
 	header>.mobile>nav.on>.m_gnb>li>a{
 		display:block;
 		width:100%;
-		font-size:20px;
+		font-size:40px;
 		text-align:center;
 	}
 
+	
+	
+	
 	/*section*/
 	section>.boxs{
 		
