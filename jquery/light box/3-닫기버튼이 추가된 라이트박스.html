@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>라이트 박스 그림자</title>
+	
+	<style>
+		*{margin:0; padding:0;}
+		
+		h1{
+			height:100px;
+			line-height:100px;
+			text-align:center;
+		}
+		
+		.book{
+			display:inline-block;
+			width:140px;
+			height:190px;
+		}
+		
+		.book>img{
+			width:100%;
+			height:100%;
+		}
+		
+		.shadow{
+			display:none;
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background-color:#000;
+			opacity:0.5;
+		}
+		
+		.lightbox{
+			display:none;
+			position:fixed;
+			left:50%;
+			top:50%;
+			width:400px;
+			height:500px;
+			margin:-250px 0 0 -200px;
+		}
+		
+		.lightbox>img{
+			width:100%;
+			height:100%;
+		}
+		
+		/*닫기버튼*/
+		.lightbox>.clse{
+			width:70px;
+			height:25px;
+			background:none;
+			background-color:#FFF;
+			border:1px solid #ccc;
+			border-radius:5px;
+		}
+		
+	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+		/* ready 이벤트가 작동하는 시점은 DOM Tree구성이 완료된 시점 // DOM Tree -> load(이미지,텍스트가 메모리에 적재된 시점)*/
+		$(document).ready(function(){
+		
+			
+			
+			var imgSrc = ["images/big_0.png","images/big_1.png"];
+			var imgAlt = ["반응형웹퍼블리싱","UI/UX디자인"];
+			
+			$(".book").on("click",function(evt){
+				
+				var idx = $(this).index();
+				
+				$(".lightbox").children("img").attr({
+					"src":imgSrc[idx],
+					"alt":imgAlt[idx]
+				});
+				
+				$(".shadow").show(); //그림자 표시
+				$(".lightbox").show(); //라이트박스 표시
+				
+				evt.preventDefault();
+				
+			});
+			
+			
+			/*닫기 버튼, 그림자영역을 클릭하면  라이트박스가 닫힘*/
+			$(".clse, .shadow").on("click",function(){ 
+				$(".lightbox").hide();
+				$(".shadow").hide();
+			});
+			
+			
+			
+		});
+		
+	//]]>
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>라이트 박스의 기초</h1>
+		
+		<div>
+			<a href="#" class="book"><img src="images/thumb_0.png" alt="반응형 웹퍼블리싱" /></a>
+			<a href="#" class="book"><img src="images/thumb_1.png" alt="ui/ux디자인" /></a>
+		</div>
+		
+		<div class="shadow"></div>
+		
+		<div class="lightbox">
+			<img />
+			<button type="button" class="clse">닫기</button>
+		</div>
+		
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- / -->
