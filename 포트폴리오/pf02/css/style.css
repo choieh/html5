@@ -18,9 +18,19 @@ header{
 }
 
 header>h1{
+	overflow:hidden;
 	position:absolute;
-	top:0;
+	top:10px;
+	left:400px;
+}
+header>h1>a{
+	display:block;
+	width:75px;
+	height:33px;
+	background-image:url(../images/chevrolet/new_gnb_icon.png);
+	background-repeat:no-repeat;
 	text-indent:-9999px;
+	
 }
 
 header>nav{
@@ -41,22 +51,31 @@ header>nav>.gnb:after{
 }
 header>nav>.gnb>li{
 	float:left;
-	width:185px;
+	width:160px;
 	height:50px;
 	
 }
 header>nav>.gnb>li>a{
 	display:block;
-	width:185px;
+	width:160px;
 	height:50px;
 	line-height:50px;
 	text-align:center;
+}
+
+header>h2{
+	position:absolute;
+	top:15px;
+	right:220px;
+	font-size:15px;
+	
 }
 
 /*모바일*/
 header>.mobile{
 	display:none;
 }
+
 
 
 /*section*/
@@ -66,27 +85,184 @@ section>.boxs{
 section>.boxs:after{
 	display:block; clear:both; content:"";
 }
-section>.boxs>.box{
+
+#box1,#box2,#box3{
 	float:left;
-	width:33.3%;
+	width:25%;
+	height:500px;
+}
+#box4{
+	float:right;
+	width:25%;
+	height:1000px;
+}
+
+#box5,#box6,#box7{
+	float:right;
+	width:25%;
 	height:500px;
 }
 
 
+
+/*
+section>.boxs>#box4{
+	float:left;
+	width:33.3%;
+	height:100%px;
+}
+*/
+
 /*footer*/
 footer{
-	height:50px;
+	width:100%;
+	height:100px;
 }
-footer>address{
-	height:50px;
-	line-height:50px;
-	text-align:center;
+ 
+	/*공통부분*/
+.footer_logo, .footer_con, .footer_sns{
+	position:relative;
+	float:left;
+	width:33.3%;
+	height:100px;
 }
 
+
+	/*logo*/
+footer>.footer_logo{
+	/*position:relative; 공통부분으로 모았음*/ 
+}
+footer>.footer_logo>h3{
+	position:absolute;
+	top:40px;
+	left:50%;
+	margin-left:-90px;
+}
+footer>.footer_logo>h3>a{
+	display:block;
+	width:181px;
+	height:17px;
+	background-image:url(../images/chevrolet/footer_text.png);
+	background-repeat:no-repeat;
+	text-indent:-9999px;
+}
+
+
+
+	/*con*/
+footer>.footer_con{
+	/*position:relative; 공통부분으로 모았음*/ 
+}
+
+footer>.footer_con>.con_wrap{
+	position:absolute;
+	top:40px;
+	left:50%;
+	margin-left:-250px;
+}
+
+footer>.footer_con>.con_wrap>ul{
+	width:100%;
+	margin-bottom:5px;
+	*zoom:1;
+}
+footer>.footer_con>.con_wrap>ul:after{
+	display:block; clear:both; content:"";
+}
+footer>.footer_con>.con_wrap>ul>li{
+	float:left;
+	height:20px;
+	margin-right:25px;
+}
+footer>.footer_con>.con_wrap>ul>li:last-child{
+	margin-right:0;
+}
+footer>.footer_con>.con_wrap>ul>li>a{
+	display:block;
+	height:40px;
+	text-align:center;
+}
+footer>.footer_con>.con_wrap>p{
+	height:20px;
+}
+
+
+	/*sns*/
+footer>.footer_sns{
+	/*position:relative; 공통부분으로 모았음*/ 
+}
+
+footer>.footer_sns>.sns_wrap{
+	position:absolute;
+	top:40px;
+	left:50%;
+	width:50%;
+	margin-left:-150px;
+}
+
+footer>.footer_sns>.sns_wrap>h4{
+	display:block;
+	float:left;
+	height:25px;
+	line-height:25px;
+	margin-right:5px;
+}
+footer>.footer_sns>.sns_wrap>ul{
+	*zoom:1;
+}
+footer>.footer_sns>.sns_wrap>ul:after{
+	display:block; clear:both; content:"";
+}
+footer>.footer_sns>.sns_wrap>ul>li{
+	float:left;
+}
+footer>.footer_sns>.sns_wrap>ul>li>a{
+	display:block;
+	height:25px;
+	margin-right:7px;
+	background-image:url(../images/chevrolet/sp_layout.png);
+	text-indent:-9999px;
+}
+
+footer>.footer_sns>.sns_wrap>ul>li>a.btn_fb{
+	width:24px;
+	background-position:-2px -62px;
+}
+footer>.footer_sns>.sns_wrap>ul>li>a.btn_tw{
+	width:24px;
+	background-position:-28px -62px;
+}
+footer>.footer_sns>.sns_wrap>ul>li>a.btn_yt{
+	width:24px;
+	background-position:-54px -62px;
+}
+footer>.footer_sns>.sns_wrap>ul>li>a.btn_blog{
+	width:24px;
+	background-position:-80px -62px;
+}
+footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
+	width:24px;
+	background-position:-83px -208px;
+}
 
 
 /*미디어 쿼리*/
-@media screen and (min-width:769px) and (max-width:1600px){
+@media screen and (min-width:1080px) and (max-width:1600px){
+
+	header>h1{
+		overflow:hidden;
+		position:absolute;
+		top:10px;
+		left:80px;
+	}	
+	
+	header>h2{
+		position:absolute;
+		top:15px;
+		right:100px;
+		font-size:15px;
+	
+	}
 
 	header>nav{
 		
@@ -97,12 +273,19 @@ footer>address{
 	header>nav>.gnb:after{
 		
 	}
+	
 	header>nav>.gnb>li{
-		
-		
+	float:left;
+	width:130px;
+	height:50px;
+	
 	}
 	header>nav>.gnb>li>a{
-		
+		display:block;
+		width:130px;
+		height:50px;
+		line-height:50px;
+		text-align:center;
 	}
 
 
@@ -115,17 +298,32 @@ footer>address{
 		width:50%;
 		height:500px;
 	}
+	
+	
+	/*footer*/
+	footer{}
+	.footer_logo,.footer_con,.footer_sns{
+		width:100%;
+	}
+
 
 }
 
 
-@media screen and (max-width:780px){
+@media screen and (max-width:1079px){
 
 	/*pc 네비게이션*/
 	header{
 		position:relative;
 		background-color:#FFF;
 	}
+		
+	header>h1{
+		overflow:hidden;
+		position:absolute;
+		top:10px;
+		left:200px;
+	}	
 		
 	header>nav>.gnb{
 		display:none;
@@ -217,6 +415,7 @@ footer>address{
 		position:absolute;
 		top:200px;
 		left:50%;
+		margin-left:-120px;
 	}
 	
 	header>.mobile>nav.on>.m_gnb>li{
@@ -244,6 +443,14 @@ footer>address{
 	section>.boxs>.box{
 		width:100%;
 		height:500px;
+	}
+	
+	
+	
+	/*footer*/
+	footer{}
+	.footer_logo,.footer_con,.footer_sns{
+		width:100%;
 	}
 
 }
