@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
 a:link,a:visited,a:hover,a:active{
 	color:#000;
 	text-decoration: none;
@@ -13,15 +15,14 @@ header,section,footer,.box{
 
 header{
 	position:relative;
-	height:50px;
-	background-color:#aaa;
+	height:80px;
 }
 
 header>h1{
 	overflow:hidden;
 	position:absolute;
-	top:10px;
-	left:400px;
+	top:20px;
+	left:350px;
 }
 header>h1>a{
 	display:block;
@@ -38,7 +39,7 @@ header>nav{
 	top:0;
 	left:50%;
 	width:800px;
-	height:50px;
+	height:80px;
 	margin-left:-400px;
 }
 header>nav>.gnb{
@@ -52,20 +53,20 @@ header>nav>.gnb:after{
 header>nav>.gnb>li{
 	float:left;
 	width:160px;
-	height:50px;
+	height:80px;
 	
 }
 header>nav>.gnb>li>a{
 	display:block;
 	width:160px;
-	height:50px;
-	line-height:50px;
+	height:80px;
+	line-height:80px;
 	text-align:center;
 }
 
 header>h2{
 	position:absolute;
-	top:15px;
+	top:30px;
 	right:220px;
 	font-size:15px;
 	
@@ -80,28 +81,287 @@ header>.mobile{
 
 /*section*/
 section>.boxs{
+	font-family: 'Nanum Gothic', sans-serif;
 	*zoom:1;
+
 }
 section>.boxs:after{
 	display:block; clear:both; content:"";
 }
 
-#box1,#box2,#box3{
+/* article{ */
+	/* text-indent:-9999px; */
+/* } */
+
+	/*box1*/
+#box1{
+	position:relative;
 	float:left;
 	width:25%;
-	height:500px;
+	height:498px;
+	text-indent:-9999px;
+	background-image:url(../images/chevrolet/visual_bimos_small.jpg);
+	background-size:cover;
+	background-position:center center;
+	background-repeat:no-repeat;
 }
-#box4{
-	float:right;
-	width:25%;
-	height:1000px;
+#box1>.btn_view{
+	position:absolute;
+	top:300px;
+	left:90px;
+	width:132px;
+	height:40px;
+}
+#box1>.btn_view>a{
+	display:block;
+	width:132px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
 }
 
-#box5,#box6,#box7{
+
+	/*box2*/
+#box2{
+	position:relative;
+	float:left;
+	width:50%;
+	height:498px;
+	text-indent:-9999px;
+	background-image:url(../images/chevrolet/visual_retail.jpg);
+	background-position:-80px 0;
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+#box2>.btn_view{
+	position:absolute;
+	top:225px;
+	left:70px;
+	width:132px;
+	height:40px;
+}
+
+#box2>.btn_view>ul{
+	width:250px;
+	height:40px;
+	*zoom:1;
+}
+
+#box2>.btn_view>ul:after{
+	display:block; clear:both; content:"";
+}
+
+#box2>.btn_view>ul>li{
+	float:left;
+	width:120px;
+	height:40px;
+	margin-right:5px;
+}
+
+#box2>.btn_view>ul>li:last-child{
+	margin-right:0;
+}
+
+#box2>.btn_view>ul>li>a{
+	display:block;
+	width:120px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+}
+
+
+#box3{
 	float:right;
 	width:25%;
-	height:500px;
+	height:996px;
 }
+
+#box4,#box5,#box6{
+	float:right;
+	width:25%;
+	height:498px;
+}
+
+	/*box4*/
+#box4{
+	overflow:hidden;
+	position:relative;
+	background-color:rgba(0,0,0,0.8);
+}
+#box4>.box_img{
+	position:absolute;
+	top:50%;
+	width:100%;
+	height:50%;
+	text-indent:-9999px;
+	background-image:url(../images/chevrolet/img_spark.jpg);
+	background-size:cover;
+	background-position:-240px 0;
+	background-repeat:no-repeat;
+	/* filter: grayscale(100%); */
+}
+
+#box4:hover>.box_img{
+	background-size:900px;
+	background-position:-330px -20px;
+}
+
+#box4>.tri{
+	width:0;
+	height:30px;
+	background-color:#f2b218;
+	transition: width 0.5s;
+}
+
+#box4:hover>.tri{
+	width:100%;
+}
+
+#box4>h2{
+	position:absolute;
+	top:70px;
+	left:30px;
+	width:100%;
+	height:200px;
+}
+#box4>h2>a{
+	display:block;
+	width:100%;
+	height:200px;
+	font-size:20px;
+	line-height:40px;
+	color:#eee;
+}
+#box4>h2>a>span{
+	font-size:30px;
+}
+
+
+
+
+
+	/*box5*/
+#box5{
+	overflow:hidden;
+	position:relative;
+	background-color:rgba(0,0,0,0.8);
+}	
+	
+#box5>.box_img{
+	position:absolute;
+	top:50%;
+	width:100%;
+	height:50%;
+	text-indent:-9999px;
+	background-image:url(../images/chevrolet/img_orlando.jpg);
+	background-size:cover;
+	background-position:-200px 0;	
+	background-repeat:no-repeat;
+	
+}
+
+#box5:hover>.box_img{
+	background-size:900px;
+	background-position:-280px -20px;
+}
+
+#box5>.tri{
+	width:0;
+	height:30px;
+	background-color:#f2b218;
+	transition: width 0.5s;
+}
+
+#box5:hover>.tri{
+	width:100%;
+}
+
+#box5>h2{
+	position:absolute;
+	top:70px;
+	left:30px;
+	width:100%;
+	height:200px;
+	
+}
+#box5>h2>a{
+	display:block;
+	width:100%;
+	height:200px;
+	color:#eee;
+	font-size:20px;
+	line-height:40px;
+}
+#box5>h2>a>span{
+	font-size:30px;
+}
+
+
+
+	/*box6*/
+#box6{
+	overflow:hidden;
+	position:relative;
+	background-color:rgba(0,0,0,0.8);
+}
+
+#box6>.box_img{
+	position:absolute;
+	top:50%;
+	width:100%;
+	height:50%;
+	text-indent:-9999px;
+	background-image:url(../images/chevrolet/img_captiva.jpg);
+	background-size:cover;
+	background-position:-240px 0;	
+	background-repeat:no-repeat;
+	
+}
+
+#box6:hover>.box_img{
+	background-size:900px;
+	background-position:-330px -20px;
+}
+
+#box6>.tri{
+	width:0;
+	height:30px;
+	background-color:#f2b218;
+	transition: width 0.5s;
+}
+
+#box6:hover>.tri{
+	width:100%;
+}
+
+#box6>h2{
+	position:absolute;
+	top:70px;
+	left:30px;
+	width:100%;
+	height:200px;
+	
+}
+#box6>h2>a{
+	display:block;
+	width:100%;
+	height:200px;
+	color:#eee;
+	font-size:20px;
+	line-height:40px;
+}
+#box6>h2>a>span{
+	font-size:30px;
+}
+
+
+
+
+
+	
+
 
 
 
@@ -252,13 +512,13 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 	header>h1{
 		overflow:hidden;
 		position:absolute;
-		top:10px;
+		top:20px;
 		left:80px;
 	}	
 	
 	header>h2{
 		position:absolute;
-		top:15px;
+		top:30px;
 		right:100px;
 		font-size:15px;
 	
@@ -277,14 +537,14 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 	header>nav>.gnb>li{
 	float:left;
 	width:130px;
-	height:50px;
+	height:80px;
 	
 	}
 	header>nav>.gnb>li>a{
 		display:block;
 		width:130px;
-		height:50px;
-		line-height:50px;
+		height:80px;
+		line-height:80px;
 		text-align:center;
 	}
 
@@ -294,10 +554,38 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 		
 	}
 	
+	/*
 	section>.boxs>.box{
 		width:50%;
 		height:500px;
+	}*/
+	
+	#box1{
+	width:100%;
+	/* height:480px; */
+	background-image:url(../images/chevrolet/visual_bimos.jpg);
+	background-position:0 0;
 	}
+	
+	#box2{
+	width:100%;
+	height:498px;
+	background-image:url(../images/chevrolet/visual_retail.jpg);
+	background-position:0 0;
+	
+	}
+	
+	#box3{
+		width:100%;
+		height:498px;
+	}
+
+	
+	#box4,#box5,#box6{
+		width:33.3333%;
+		height:498px;
+	}
+	
 	
 	
 	/*footer*/
@@ -321,7 +609,7 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 	header>h1{
 		overflow:hidden;
 		position:absolute;
-		top:10px;
+		top:20px;
 		left:200px;
 	}	
 		
@@ -352,13 +640,14 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 		right:10px;
 		bottom:50px;
 		width:50px;
-		height:50px;
+		height:80px;
 		cursor:pointer;
 	}
 	header>.mobile>.top>i{
 		display:block;
 		width:50px;
-		height:50px;
+		height:80px;
+		line-height:80px;
 		font-size:50px;
 		text-align:center;
 	}
@@ -366,11 +655,14 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 	
 	header>.mobile>.btn{
 		position:fixed;
-		top:0;
+		top:10px;
 		right:10px;
 		width:50px;
 		height:50px;
-		z-index:100;
+		padding:5px;
+		background-color:#FFF;
+		border-radius:10px;
+		z-index:3000;
 		cursor:pointer;
 	}
 	header>.mobile>.btn>i{
@@ -392,7 +684,7 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 	header>.mobile>.btn>.fa-times{
 		display:none;
 		position:absolute;
-		top:0;
+		top:10;
 		width:50px;
 		height:50px;
 		font-size:50px;
@@ -408,7 +700,8 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 		right:0;
 		bottom:0;
 		width:100%;
-		background-color:#aaa;
+		background-color:#ddd;
+		z-index:2000;
 	}
 	
 	header>.mobile>nav.on>.m_gnb{
@@ -435,6 +728,7 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 	
 	
 	
+	
 	/*section*/
 	section>.boxs{
 		
@@ -442,8 +736,106 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 	
 	section>.boxs>.box{
 		width:100%;
-		height:500px;
+		height:480px;
 	}
+	
+	
+	#box1,#box2,#box3,#box4,#box5,#box6{
+		width:100%;
+		height:480px;
+	}
+	
+	#box1{
+		background-image:url(../images/chevrolet/visual_bimos.jpg);
+		background-position:-80px 0;
+	}
+	
+	
+#box1>.btn_view{
+	position:absolute;
+	top:170px;
+	left:60px;
+}
+
+	
+	
+	
+	
+#box2{
+		background-image:url(../images/chevrolet/visual_retail.jpg);
+		background-position:-80px 0;
+	}
+	
+	
+#box2>.btn_view{
+	position:absolute;
+	top:210px;
+	left:60px;
+}	
+	
+	
+	
+	
+	/*box4*/
+#box4{
+	
+}
+#box4>.box_img{
+	background-size:130%;
+	background-position:-220px -40px;
+
+}
+
+#box4:hover>.box_img{
+	background-size:150%;
+	background-position:-400px -80px;
+}
+
+
+
+
+
+
+	/*box5*/
+#box5{
+
+}	
+	
+#box5>.box_img{
+	background-size:130%;
+	background-position:-220px -40px;
+	
+}
+
+#box5:hover>.box_img{
+	background-size:150%;
+	background-position:-400px -80px;
+}
+
+
+
+
+
+	/*box6*/
+#box6{
+	
+}
+
+#box6>.box_img{
+	background-size:130%;
+	background-position:-220px -40px;
+	
+}
+
+#box6:hover>.box_img{
+	background-size:150%;
+	background-position:-400px -80px;
+}
+
+
+
+
+	
 	
 	
 	
