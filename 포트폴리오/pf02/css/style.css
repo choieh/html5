@@ -178,6 +178,15 @@ section>.boxs:after{
 	height:996px;
 }
 
+#box3>.sitemap_wrap{
+	width:100%;
+}
+
+/*★여기부터!!*/
+#box3>.sitemap_wrap>ul>li{}s
+
+
+
 #box4,#box5,#box6{
 	float:right;
 	width:25%;
@@ -787,8 +796,8 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 }
 
 #box4:hover>.box_img{
-	background-size:150%;
-	background-position:-400px -80px;
+	background-size:130%;
+	background-position:-220px -40px;
 }
 
 
@@ -808,8 +817,8 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 }
 
 #box5:hover>.box_img{
-	background-size:150%;
-	background-position:-400px -80px;
+	background-size:130%;
+	background-position:-220px -40px;
 }
 
 
@@ -827,9 +836,10 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 	
 }
 
+
 #box6:hover>.box_img{
-	background-size:150%;
-	background-position:-400px -80px;
+	background-size:130%;
+	background-position:-220px -40px;
 }
 
 
