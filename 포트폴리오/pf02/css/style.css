@@ -123,18 +123,57 @@ section>.boxs:after{
 
 	/*box2*/
 #box2{
+	overflow:hidden;
 	position:relative;
 	float:left;
 	width:50%;
 	height:498px;
+}
+#box2>.slides-container{
+	width:100%;
+}
+
+#box2>.slides-container>.slide{
+	position:absolute;
+	left:0;
+	top:0;
+	width:300%;
+	*zoom:1;
+}
+#box2>.slides-container>.slide:after{
+	display:block; clear:both; content:"";
+}
+#box2>.slides-container>.slide>li{
+	float:left;
+	width:33.3333%;
+	height:498px;
 	text-indent:-9999px;
+}
+
+
+#box2>.slides-container>.slide>li:nth-child(1){
 	background-image:url(../images/chevrolet/visual_retail.jpg);
-	background-position:-80px 0;
+	background-position:-80px 0; 
 	background-size:cover;
 	background-repeat:no-repeat;
 }
 
-#box2>.btn_view{
+#box2>.slides-container>.slide>li:nth-child(2){
+	background-image:url(../images/chevrolet/visual_the_new_trax_m.jpg);
+	background-position:-80px 0; 
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+#box2>.slides-container>.slide>li:nth-child(3){
+	background-image:url(../images/chevrolet/visual_the_next_spark_m.jpg);
+	background-position:-80px 0; 
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+
+#box2>.slides-container>.slide>li:nth-child(1)>.btn_view{
 	position:absolute;
 	top:225px;
 	left:70px;
@@ -142,28 +181,28 @@ section>.boxs:after{
 	height:40px;
 }
 
-#box2>.btn_view>ul{
+#box2>.slides-container>.slide>li .btn_view>ul{
 	width:250px;
 	height:40px;
 	*zoom:1;
 }
 
-#box2>.btn_view>ul:after{
+#box2>.slides-container>.slide>li .btn_view>ul:after{
 	display:block; clear:both; content:"";
 }
 
-#box2>.btn_view>ul>li{
+#box2>.slides-container>.slide>li .btn_view>ul>li{
 	float:left;
 	width:120px;
 	height:40px;
 	margin-right:5px;
 }
 
-#box2>.btn_view>ul>li:last-child{
+#box2>.slides-container>.slide>li .btn_view>ul>li:last-child{
 	margin-right:0;
 }
 
-#box2>.btn_view>ul>li>a{
+#box2>.slides-container>.slide>li .btn_view>ul>li>a{
 	display:block;
 	width:120px;
 	height:40px;
@@ -172,7 +211,11 @@ section>.boxs:after{
 }
 
 
+
+
+
 #box3{
+	position:relative;
 	float:right;
 	width:25%;
 	height:996px;
@@ -180,16 +223,20 @@ section>.boxs:after{
 }
 
 #box3>.sitemap_wrap{
-	width:100%;
+	position:absolute;
+	left:100px;
+	width:76%;
 }
 
 /*★여기부터!!*/
 #box3>.sitemap_wrap>ul>.sm_depth1{
-	margin:15px;
+	margin:15px 0;
 }
-#box3>.sitemap_wrap>ul>.sm_depth1:first-child{
-	/* margin-top:0; */
+
+#box3>.sitemap_wrap>ul>.sm_depth1>ul{
+	text-indent:120px;
 }
+
 #box3>.sitemap_wrap>ul>.sm_depth1>.pdb_10{
 	padding-bottom:10px;
 	color:#000;
@@ -532,14 +579,14 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 /*미디어 쿼리*/
 @media screen and (min-width:1080px) and (max-width:1600px){
 
-	header>h1{
+header>h1{
 		overflow:hidden;
 		position:absolute;
 		top:20px;
 		left:80px;
 	}	
 	
-	header>h2{
+header>h2{
 		position:absolute;
 		top:30px;
 		right:100px;
@@ -547,23 +594,23 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 	
 	}
 
-	header>nav{
+header>nav{
 		
 	}
-	header>nav>.gnb{
+header>nav>.gnb{
 		
 	}
-	header>nav>.gnb:after{
+header>nav>.gnb:after{
 		
 	}
 	
-	header>nav>.gnb>li{
+header>nav>.gnb>li{
 	float:left;
 	width:130px;
 	height:80px;
 	
 	}
-	header>nav>.gnb>li>a{
+header>nav>.gnb>li>a{
 		display:block;
 		width:130px;
 		height:80px;
@@ -573,7 +620,7 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 
 
 	/*section*/
-	section>.boxs{
+section>.boxs{
 		
 	}
 	
@@ -583,14 +630,14 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 		height:500px;
 	}*/
 	
-	#box1{
+#box1{
 	width:100%;
 	/* height:480px; */
 	background-image:url(../images/chevrolet/visual_bimos.jpg);
 	background-position:0 0;
 	}
 	
-	#box2{
+#box2{
 	width:100%;
 	height:498px;
 	background-image:url(../images/chevrolet/visual_retail.jpg);
@@ -598,35 +645,56 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 	
 	}
 	
-	#box3{
+#box3{
 		position:relative;
 		width:100%;
 		height:498px;
 		
-	}
+}
 	
-	#box3>.sitemap_wrap{
+#box3>.sitemap_wrap{
 		position:absolute;
-		top:50px;
-		left:150px;
+		top:30px;
+		left:30px;
+		width:95%;
 	}
-	#box3>.sitemap_wrap>ul{
+#box3>.sitemap_wrap>ul{
 		*zoom:1;
 	}
-	#box3>.sitemap_wrap>ul:after{
+#box3>.sitemap_wrap>ul:after{
 		display:block; clear:both; contant:"";
 	}
 	
-	#box3>.sitemap_wrap>ul>.sm_depth1{
+#box3>.sitemap_wrap>ul>.sm_depth1{
 	float:left;
-	margin:15px;
+	margin:0 0;
+}
+
+#box3>.sitemap_wrap>ul>.sm_depth1>ul{
+	padding-right:50px;
+	text-indent:0;
+}
+
+#box3>.sitemap_wrap>ul>.sm_depth1>.pdb_10{
+	padding-bottom:10px;
+	color:#000;
+}
+
+#box3>.sitemap_wrap>ul>.sm_depth1>ul>li{
+	margin-top:8px;
+}
+
+#box3>.sitemap_wrap>ul>.sm_depth1>ul>li>a{
+	font-size:16px;
 }
 
 	
-	#box4,#box5,#box6{
+
+	
+#box4,#box5,#box6{
 		width:33.3333%;
 		height:498px;
-	}
+}
 	
 	
 	
@@ -682,14 +750,17 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 		right:10px;
 		bottom:50px;
 		width:50px;
-		height:80px;
+		height:50px;
+		background-color:#FFF;
+		border-radius:10px;
 		cursor:pointer;
+		z-index:3000;
 	}
 	header>.mobile>.top>i{
 		display:block;
 		width:50px;
-		height:80px;
-		line-height:80px;
+		height:50px;
+		line-height:50px;
 		font-size:50px;
 		text-align:center;
 	}
@@ -809,7 +880,7 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 	}
 	
 	
-#box2>.btn_view{
+#box2>.slides-container>.btn_view{
 	position:absolute;
 	top:210px;
 	left:60px;
@@ -818,15 +889,17 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 #box3{
 		position:relative;
 		width:100%;
-		height:498px;
+		height:700px;
 		
 }
 	
 #box3>.sitemap_wrap{
 		position:absolute;
-		top:50px;
-		left:150px;
+		top:20px;
+		left:30px;
+		width:94%;
 }
+
 #box3>.sitemap_wrap>ul{
 		*zoom:1;
 }
@@ -834,16 +907,35 @@ footer>.footer_sns>.sns_wrap>ul>li>a.btn_insta{
 display:block; clear:both; contant:"";
 }
 	
-	#box3>.sitemap_wrap>ul>.sm_depth1{
+#box3>.sitemap_wrap>ul>.sm_depth1{
 	float:left;
-	margin:15px;
-	
+}
+#box3>.sitemap_wrap>ul>.sm_depth1>ul{
+	padding-right:80px;
+	text-indent:0;
+}
+#box3>.sitemap_wrap>ul>.sm_depth1>ul>li{
+	margin-top:8px;
+}
+#box3>.sitemap_wrap>ul>.sm_depth1>ul>li>a{
+	font-size:16px;
+}
 	
 	
 	/*box4*/
 #box4{
 	
 }
+#box4>.tri{
+	width:20px;
+	height:100%;
+}
+
+#box4:hover>.tri{
+	width:20px;
+}
+
+
 #box4>.box_img{
 	background-size:130%;
 	background-position:-220px -40px;
@@ -859,11 +951,19 @@ display:block; clear:both; contant:"";
 
 
 
-
 	/*box5*/
 #box5{
 
 }	
+
+#box5>.tri{
+	width:20px;
+	height:100%;
+}
+
+#box5:hover>.tri{
+	width:20px;
+}
 	
 #box5>.box_img{
 	background-size:130%;
@@ -884,6 +984,15 @@ display:block; clear:both; contant:"";
 #box6{
 	
 }
+
+#box6>.tri{
+	width:20px;
+	height:100%;
+}
+#box6:hover>.tri{
+	width:20px;
+}
+
 
 #box6>.box_img{
 	background-size:130%;

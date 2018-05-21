@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	
+	var nowIdx = 0;
 	var check = true;
 
 	//모바일 버전 메뉴버튼 클릭시
@@ -60,7 +61,19 @@ $(document).ready(function(){
 		
 	});
 	
+	//#box2 - 슬라이드
 	
+	setInterval(function(){
+		
+		if(nowIdx ==2){
+			nowIdx = 0;
+		}else{
+			nowIdx= nowIdx+1;
+		}
+		
+		$("#box2>.slides-container>.slide").stop().animate({"left":-100*nowIdx+"%"});
+		
+	},2000);
 	
 
 });
