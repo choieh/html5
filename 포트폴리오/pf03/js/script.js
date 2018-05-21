@@ -9,12 +9,6 @@ $(function(){
 	
 	$("#home").height($(window).height());//DOM트리 구성이 완료된 시점(ready)에 높이값 설정
 	
-	/*
-	$("#services").height($(window).height());
-	$("#portfolio").height($(window).height());
-	$("#contact").height($(window).height());
-	*/
-	
 	$(window).on("load resize",function(){ /*callback함수 : 이벤트가 일어났을때 실행되는 함수*/
 	
 		if( $(window).width>767 ){ /*브라우저의 폭이>767*/

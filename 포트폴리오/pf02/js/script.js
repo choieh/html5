@@ -6,8 +6,7 @@ $(document).ready(function(){
 	//모바일 버전 메뉴버튼 클릭시
 	$("header>.mobile>.btn").on("click",function(){
 		
-		$(".mobile>nav").addClass("on").toggle()
-		;
+		$(".mobile>nav").addClass("on").toggle();
 		
 		if(check == true){
 			

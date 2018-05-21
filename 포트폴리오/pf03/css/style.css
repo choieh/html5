@@ -111,7 +111,16 @@ h1{
 	animation-iteration-count:infinite;
 }
 
+/*★section 임시 공통사항*/
 
+#about,#services,#portfolio,#contact{
+	width:100%;
+	height:500px;
+	outline:1px solid red;
+}
+
+
+/*about*/
 
 
 

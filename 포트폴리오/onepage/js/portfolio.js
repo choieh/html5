@@ -61,12 +61,15 @@ $(document).ready(function(){
 	});
 	
 	/*포트폴리오 - 이미지에 마우스 올렸을때 이미지 링크 버튼 보임*/
-	$(".container_3>.boxs>.top").on("mouseover",function(){
-		$(".container_3>.boxs>.top>span").css("opacity",1);
+	$(".container_3>.boxs>.top>img").on("mouseover",function(){
+		
+		 var imgIdx = $(".container_3>.boxs>.top>img").index(this);
+		
+		 $(".container_3>.boxs>.top>span").eq(imgIdx).css("opacity",1);
 		
 	});
 	
-	$(".container_3>.boxs>.top").on("mouseout",function(){
+	$(".container_3>.boxs>.top>img").on("mouseout",function(){
 		$(".container_3>.boxs>.top>span").css("opacity",0);
 		
 	});
