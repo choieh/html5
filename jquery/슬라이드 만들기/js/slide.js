@@ -64,7 +64,7 @@ $(document).ready(function(){
 	}, 2000);
 		
 		
-		evt.preventDefualt();
+		evt.preventDefault();
 	});
 	
 		//다음버튼
