@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html >
+<!--
+파일명 : index.html
+작성자 :최은혜
+설명 : 마우스 휠 plugin을 사용하여 스크롤되는 웹페이지
+-->
+
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Choi eun hye </title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/litera/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+</head>
+<body>
+
+<!-- 주 메뉴 -->
+<ul id="menu">
+	<li class="on"> <a href="#"> <i class="fa fa-circle"></i> </a> </li>
+	<li> <a href="#"> <i class="fa fa-circle"></i></a> </li>
+	<li> <a href="#"> <i class="fa fa-circle"></i></a> </li>
+	<li> <a href="#"> <i class="fa fa-circle"></i></a> </li>
+</ul>
+
+<!-- sns -->
+<ul id="sns">
+	<li> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
+	<li> <a href="#"> <i class="fa fa-twitter"></i> </a> </li>
+	<li> <a href="#"><i class="fa fa-envelope" data-toggle="modal" data-target="#email"></i></a>
+	 </li>
+</ul>
+
+<!-- 모달 -->
+<div class="modal fade" id="email" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- 모달 내용-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Contact US</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+			</div>
+			<div class="modal-body">
+				<form>
+  <fieldset>
+    <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleTextarea">Email Content</label>
+      <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Input Description "></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputFile">File input</label>
+      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+
+    </div>
+  </fieldset>
+</form>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary" data-dismiss="modal">Send</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+<!-- 전체 페이지 -->
+<div id="wrap">
+
+	<!-- 첫 번째 박스 -->
+		<section>
+			<article>
+				<p>Spring</p>
+			</article>
+			<img class="p11" src="img/obj11.png" alt="첫번째 박스">
+			<img class="p12" src="img/obj12.png" alt="첫번째 박스">
+			<img class="p13" src="img/obj13.png" alt="첫번째 박스">
+		</section>
+
+	<!-- 두 번째 박스 -->
+	<section>
+		<article>
+			<p>Summer</p>
+		</article>
+		<img class="p21" src="img/obj21.png" alt="두번째 박스">
+		<img class="p22" src="img/obj22.png" alt="두번째 박스">
+	</section>
+
+	<!-- 세 번째 박스 -->
+	<section>
+		<article>
+			<p>Autumn</p>
+		</article>
+		<img class="p31" src="img/obj31.png" alt="세번째 박스">
+		<img class="p32" src="img/obj32.png" alt="세번째 박스">
+		<img class="p33" src="img/obj33.png" alt="세번째 박스">
+	</section>
+
+	<!-- 네 번째 박스 -->
+	<section>
+		<article>
+			<p>Winter</p>
+		</article>
+		<img class="p41" src="img/obj41.png" alt="네번째 박스">
+		<img class="p42" src="img/obj42.png" alt="네번째 박스">
+	</section>
+
+</div>
+
+
+
+
+</body>
+</html>

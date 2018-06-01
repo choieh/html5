@@ -1,3 +1,10 @@
+/*
+작성일자: 2018.05.14
+작성자: 최은혜
+파일명: portfolio.js
+*/
+
+
 $(document).ready(function(){
 	
 	
@@ -6,7 +13,7 @@ $(document).ready(function(){
 		$(".container_1").offset().top,
 		$(".container_2").offset().top,
 		$(".container_3").offset().top,
-		$(".container_4").offset().top	
+		$(".container_4").offset().top,
 	];
 	
 	
@@ -15,7 +22,13 @@ $(document).ready(function(){
 
 	$(".gnb>li>a").on("click",function(evt){
 		nowIdx = $(".gnb>li>a").index(this);
-		$("html,body").animate({scrollTop:top_container[nowIdx]-100});
+		
+		
+		if(nowIdx==4){
+			$("html,body").animate({scrollTop:top_container[nowIdx]-50});
+		}else{
+			$("html,body").animate({scrollTop:top_container[nowIdx]-100});
+		}
 		evt.preventDefault();
 	});
 	
@@ -61,16 +74,18 @@ $(document).ready(function(){
 	});
 	
 	/*포트폴리오 - 이미지에 마우스 올렸을때 이미지 링크 버튼 보임*/
-	$(".container_3>.boxs>.top>img").on("mouseover",function(){
+	$(".container_3>.boxs .box").on("mouseover",function(){
 		
-		 var imgIdx = $(".container_3>.boxs>.top>img").index(this);
+		 var imgIdx = $(".container_3>.boxs .box").index(this);
 		
-		 $(".container_3>.boxs>.top>span").eq(imgIdx).css("opacity",1);
+		 $(".container_3>.boxs .box span").eq(imgIdx).css("opacity",1);
+		 $(".container_3>.boxs .box p").eq(imgIdx).css("opacity",1);
 		
 	});
 	
-	$(".container_3>.boxs>.top>img").on("mouseout",function(){
-		$(".container_3>.boxs>.top>span").css("opacity",0);
+	$(".container_3>.boxs .box").on("mouseout",function(){
+		$(".container_3>.boxs .box span").css("opacity",0);
+		$(".container_3>.boxs .box p").css("opacity",0);
 		
 	});
 	

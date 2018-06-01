@@ -1,0 +1,24 @@
+http://pfeunhye1.dothome.co.kr/pf2/
+
+쉐보레(Chervolet) 반응형 웹사이트
+
+현재 사용되고있는 사이트는 사용자 접근성이 부족한 이미지 위주의 사이트입니다.
+이것을 사용자 접근성이 높게 html 시멘틱 구조를 구성하고, IR기법을 통해 내용과 이미지를 조합하였습니다. 또한 전체적으로 메뉴가 단순하지만 사용자가 메뉴를 찾는 어려움이 없도록 디자인을 구성하였습니다.
+
+---------------------------------------------------
+
+★개인적으로 수정할것 index.html ==> 자기 자신이름으로 수정!!★
+  
+13번째 줄 부터~
+   <meta name="Author" content="최은혜">
+   <meta name="Publisher" content="CHOI EUN HYE">
+   <meta name="Classification" content="포트폴리오">
+   <!--카테고리 분류-->
+   <meta name="Location" content="Seoul Korea">
+   <meta name="Author-Date" content="2018.5.14">
+   <meta name="Copyright" content="최은혜">  
+
+
+
+
+

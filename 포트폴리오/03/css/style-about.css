@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:500');
+#about{
+	position:relative;
+	background-color:#fff;
+}
+
+/*공통요소*/
+section{
+}
+
+
+section>.subject{
+	position:relative;
+	width:600px;
+	height:300px;
+	margin:0 auto;
+}
+
+
+section>.subject>.main_text{
+	position:absolute;
+	width:600px;
+	height:50px;
+	margin-top:200px;
+	color:#efc5ba;
+	font-size:105px;
+	text-align:center;
+	font-weight:800;
+}
+
+section>.subject>.sub_text{
+	position:absolute;
+	width:600px;
+	height:50px;
+	margin-top:170px;
+	color:#3d3e1f;
+	font-size:12px;
+	font-weight:800;
+	text-align:center;
+}
+
+
+#about>.css-vertical-text {
+	color:#a1accc;
+	writing-mode: vertical-rl;
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform: rotate(180deg);
+	display:block;
+	margin-left: 40px;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+}
+
+#about>article{
+
+	position:absolute;
+	left:20%;
+	margin-top:-320px;
+	height:400px;
+	*zoom:1;
+}
+
+#about>article:after{
+	display:block;
+	clear:both;
+	content:'';
+}
+#about>article>div{
+	float:left;
+	width:235px;
+	height:350px;
+	margin-right:160px;
+	text-align:center;
+}
+#about>article>div:last-child{margin-right:0;}
+#about>article>div>.pic{
+	width:127px;
+	height:127px;
+	text-indent:-9999px;
+	margin:0 auto;
+}
+#about>article>div:nth-child(1)>.pic{background-image:url(../images/moon.png);}
+#about>article>div:nth-child(2)>.pic{background-image:url(../images/sparkles.png);}
+#about>article>div:nth-child(3)>.pic{background-image:url(../images/monkey.png);}
+
+
+#about>article>div>span{
+	display:block;
+	font-size:15px;
+	color:#efc5ba;
+	margin:15px 0;
+	font-weight:700;
+}
+
+#about>article>div>.txt{
+	font-size:13px;
+	color:#3d3e1f;
+	font-weight:600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
